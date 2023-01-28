@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+/*font-family: "Acme", sans-serif;*/
+.listPaginated {
+  display: inline-block;
+  padding: 0;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.455);
+  border: 1px solid rgba(0, 0, 0, 0.334);
+  box-shadow: 0px 8px 10px 3px #000000;
+}
+.itemPaginated {
+  display: inline;
+}
+.linkPaginated {
+  background-color: rgb(254, 153, 0);
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  float: left;
+  margin: 0;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.linkPaginated:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(254, 153, 0);
+  cursor: pointer;
+}
+.selectedPage {
+  font-weight: 800;
+  float: left;
+  margin: 0;
+  padding: 8px;
+  text-decoration: none;
+  color: rgb(254, 153, 0);
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  font-size: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+}

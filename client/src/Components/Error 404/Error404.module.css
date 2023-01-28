@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+/*font-family: "Acme", sans-serif;*/
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(./Image/Error404.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.errorDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5%;
+  max-width: 50%;
+}
+.errorMessage {
+  color: rgb(65, 31, 63);
+  font-size: 4vw;
+  font-family: "Acme", sans-serif;
+}
+.errorMessage404 {
+  color: rgb(65, 31, 63);
+  font-size: 7vw;
+  font-family: "Acme", sans-serif;
+  margin: 0;
+}
+.buttonBack {
+  background-image: linear-gradient(
+    92.88deg,
+    #411f3f 9.16%,
+    #382136 43.89%,
+    #382a37 64.72%
+  );
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI", "SF Pro Display", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all 0.5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}

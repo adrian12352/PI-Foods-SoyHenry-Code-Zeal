@@ -1,0 +1,12 @@
+html,
+body,
+.App {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overscroll-behavior-x: unset;
+  background: url("https://i.ibb.co/6vyMbZg/background.jpg") no-repeat scroll
+    center top #000;
+  background-size: cover;
+  overflow-x: hidden;
+}

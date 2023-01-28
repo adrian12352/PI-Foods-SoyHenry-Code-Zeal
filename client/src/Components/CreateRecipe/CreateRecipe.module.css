@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.formDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #0000004d;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.651);
+  border-radius: 5px;
+  width: 50%;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 2vh;
+  margin-top: 3vh;
+  background-color: rgba(100, 196, 211, 0.801);
+}
+
+.title {
+  font-family: "Acme", sans-serif;
+
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.8);
+  margin-left: auto;
+  margin-right: auto;
+}
+.labelContent {
+  font-family: "Acme", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 0.5px;
+  margin-top: 20px;
+}
+.diet {
+  margin-bottom: 8px;
+  color: #000;
+  font-weight: 800;
+}
+.inputContent {
+  width: 70%;
+  height: 4vh;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-family: "Acme", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  background: #f5f4f4bb;
+  color: rgb(0, 0, 0);
+  outline: none;
+  box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.651);
+  transition: box-shadow 0.3s;
+}
+.errors {
+  color: #f00;
+  font-size: 15px;
+  font-weight: 800;
+}
+.labelContent {
+  font-family: "Acme", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 0.5px;
+  margin-top: 20px;
+}
+.contentBox {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 90%;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.checkbox {
+  color: #000;
+  padding: 10px;
+  font-weight: 600;
+  font-family: "Acme", sans-serif;
+}
+.selectDiets {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #91f5fc;
+  padding: 10px;
+  border-radius: 15px;
+  text-shadow: 0px 0px 20px #000000;
+}
+.resume {
+  height: 150px;
+  width: 90%;
+}
+.score {
+  width: 60%;
+  appearance: none;
+  height: 25px;
+  background: linear-gradient(
+    90deg,
+    rgba(193, 28, 28, 1) 15%,
+    rgba(213, 111, 16, 1) 50%,
+    rgba(9, 230, 57, 1) 85%
+  );
+  cursor: pointer;
+  border-radius: 15px;
+  opacity: 0.7;
+}
+.score:hover {
+  opacity: 1;
+}
+.score::-webkit-slider-thumb {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #000000fb;
+  cursor: pointer;
+}
+
+.scoreTextRed {
+  margin-left: 10px;
+  color: black;
+  background-color: rgba(193, 28, 28, 1);
+  padding: 4px;
+  border-radius: 25%;
+  font-size: 20px;
+  font-family: "Acme", sans-serif;
+}
+.scoreTextOrange {
+  margin-left: 10px;
+  color: black;
+  background-color: rgba(213, 111, 16, 1);
+  padding: 4px;
+  border-radius: 25%;
+  font-size: 20px;
+  font-family: "Acme", sans-serif;
+}
+.scoreTextGreen {
+  margin-left: 10px;
+  color: black;
+  background-color: rgba(9, 230, 57, 1);
+  padding: 4px;
+  border-radius: 25%;
+  font-size: 20px;
+  font-family: "Acme", sans-serif;
+}
+.textarea {
+  margin: 5px;
+  width: 90%;
+  height: 300px;
+}
+
+.buttonCreate {
+  text-decoration: none;
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.859);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Acme", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  height: auto;
+  padding: 15px;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all 0.5s;
+  touch-action: manipulation;
+}
+.buttonBack {
+  text-decoration: none;
+  margin: 20px;
+  background-color: rgba(1, 1, 1, 0.859);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Acme", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  height: auto;
+  padding: 15px;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all 0.5s;
+  touch-action: manipulation;
+}
+.buttonCreate:hover {
+  box-shadow: rgba(10, 10, 10, 0.8) 0 1px 30px;
+  transition-duration: 0.1s;
+}
+.buttonBack:hover {
+  box-shadow: rgba(255, 255, 255, 0.8) 0 1px 30px;
+  transition-duration: 0.1s;
+}
+.divButton {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
