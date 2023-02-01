@@ -14,7 +14,7 @@ const { Recipe, Diet } = require("../db.js");
 const allApiData = async function () {
   try {
     const urlApi = await axios.get(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY_5}&number=100&addRecipeInformation=true`
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY_1}&number=100&addRecipeInformation=true`
     );
     const infoApi = await urlApi.data.results.map((el) => {
       return {
@@ -70,7 +70,7 @@ const allData = async function () {
 const allDiets = async function () {
   try {
     const dietList = await axios.get(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY_5}&number=100&addRecipeInformation=true`
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY_1}&number=100&addRecipeInformation=true`
     );
     const repeated = await dietList.data.results.map((d) => d.diets).flat(1);
     return [...new Set(repeated)];
