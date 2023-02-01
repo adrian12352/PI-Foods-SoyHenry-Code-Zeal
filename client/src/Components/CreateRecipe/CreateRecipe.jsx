@@ -3,12 +3,14 @@ import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getDiets, postRecipe } from "../../Actions";
 import styles from "./CreateRecipe.module.css";
+import Footer from "../Footer/Footer";
 
 export default function CreateRecipe() {
   const dispatch = useDispatch();
   const history = useHistory();
   const allDiets = useSelector((state) => state.Diets);
-
+  const allRecipes = useSelector((state) => state.allRecipes);
+  let recipesNames = allRecipes.map((el) => el.name);
   const [errors, setErrors] = useState({});
   const [input, setInput] = useState({
     name: "",
@@ -91,6 +93,11 @@ export default function CreateRecipe() {
     if (!input.name) {
       alert("Name required");
       return false;
+    } else if (recipesNames.includes(input.name)) {
+      return alert("Recipe name already exists");
+    } else {
+      const name = input.name;
+      input.name = input.name[0].toUpperCase() + name.substring(1);
     }
     if (!input.summary) {
       return alert("Summary required");
@@ -128,6 +135,7 @@ export default function CreateRecipe() {
     ) {
       return alert("Url imagen invalid");
     }
+
     dispatch(postRecipe(input));
     alert("Recipe Created Successfully");
     setInput({
@@ -269,6 +277,7 @@ export default function CreateRecipe() {
           </div>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }

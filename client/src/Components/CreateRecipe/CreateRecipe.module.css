@@ -8,7 +8,6 @@
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  margin-bottom: 20px;
 }
 .formDiv {
   display: flex;
@@ -23,6 +22,7 @@
   padding-bottom: 2vh;
   margin-top: 3vh;
   background-color: rgba(100, 196, 211, 0.801);
+  margin-bottom: 20px;
 }
 
 .title {
@@ -191,7 +191,6 @@
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
-  color: #ffffff;
   cursor: pointer;
   flex-shrink: 0;
   font-family: "Acme", sans-serif;
@@ -203,6 +202,7 @@
   text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
   transition: all 0.5s;
   touch-action: manipulation;
+  color: #ffffff;
 }
 .buttonCreate:hover {
   box-shadow: rgba(10, 10, 10, 0.8) 0 1px 30px;

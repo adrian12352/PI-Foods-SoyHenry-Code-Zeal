@@ -2,7 +2,7 @@ import axios from "axios";
 
 export function getRecipe() {
   return async function (dispatch) {
-    var json = await axios.get("http://localhost:3001/recipes");
+    var json = await axios.get("/recipes");
 
     return dispatch({
       type: "GET_RECIPES",
@@ -12,7 +12,7 @@ export function getRecipe() {
 }
 export function getDiets() {
   return async function (dispatch) {
-    var json = await axios.get("http://localhost:3001/diets");
+    var json = await axios.get("/diets");
     return dispatch({
       type: "GET_DIETS",
       payload: json.data,
@@ -50,7 +50,7 @@ export function cleanDetail(payload) {
 
 export function detailCard(payload) {
   return async function (dispatch) {
-    var json = await axios.get(`http://localhost:3001/recipes/${payload}`);
+    var json = await axios.get(`/recipes/${payload}`);
 
     return dispatch({
       type: "DETAIL_CARD",
@@ -62,9 +62,7 @@ export function detailCard(payload) {
 export function searchBar(payload) {
   return async function (dispatch) {
     try {
-      var json = await axios.get(
-        `http://localhost:3001/recipes/?name=${payload}`
-      );
+      var json = await axios.get(`/recipes/?name=${payload}`);
       return dispatch({
         type: "SEARCH_BAR",
         payload: json.data,
@@ -77,13 +75,15 @@ export function searchBar(payload) {
 
 export function postRecipe(payload) {
   return async function (dispatch) {
-    const postAxios = await axios.post(
-      "http://localhost:3001/recipes",
-      payload
-    );
+    const postAxios = await axios.post("/recipes", payload);
     return postAxios;
   };
 }
+//ACTION  ADD FAVORITES
 export const addFavorite = (payload) => {
   return { type: "ADD_FAVORITES", payload };
+};
+//ACTION DELETE FAVORITE
+export const deleteFavorite = (id) => {
+  return { type: "DELETE_FAVORITES", payload: id };
 };

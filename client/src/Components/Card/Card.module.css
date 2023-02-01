@@ -24,6 +24,15 @@
   display: flex;
   justify-content: flex-end;
 }
+.buttonFav {
+  margin-left: 2%;
+  position: absolute;
+  z-index: 3;
+  margin-top: 2%;
+  font-size: 19px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
 .healthScoreRed {
   background-color: rgb(193, 28, 28);
   position: absolute;
@@ -107,4 +116,14 @@
   color: rgb(0, 0, 0);
   font-size: 15px;
   font-weight: 700;
+}
+@media (max-width: 1100px) {
+  .recipeImage {
+    height: auto;
+  }
+  .divImage {
+    height: 21vw;
+  }
+}
+@media (max-width: 768px) {
 }

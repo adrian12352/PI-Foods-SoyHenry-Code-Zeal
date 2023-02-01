@@ -18,7 +18,7 @@ export default function Paginated({
         <li className={styles.itemPaginated}>
           {pageNumbers?.map((number, index) => (
             <button
-              key={`paginated${index}`}
+              key={`pagina${index}`}
               className={
                 currentPage === number
                   ? styles.selectedPage

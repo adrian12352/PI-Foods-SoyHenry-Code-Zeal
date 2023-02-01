@@ -26,7 +26,12 @@ function rooReducer(state = initialState, action) {
       const recipes = state.allRecipes;
       const recipesWithDiet = recipes.filter((r) => {
         let names = r.diets.map((d) => d.name);
-        if (names.includes(action.payload)) return r;
+        if (names.includes(action.payload)) {
+          let res = r;
+          return res;
+        } else {
+          return undefined;
+        }
       });
       return {
         ...state,
@@ -93,12 +98,11 @@ function rooReducer(state = initialState, action) {
     case "ADD_FAVORITES":
       return {
         ...state,
-        favorites: [...state.aux, action.payload],
-        aux: [...state.aux, action.payload],
+        favorites: [...state.favorites, action.payload],
       };
     case "DELETE_FAVORITES":
       const favoritesFilter = state.favorites.filter(
-        (word) => word.id !== action.payload
+        (word) => word.id !== action.payload[0].id
       );
       const allFilter = state.aux.filter((word) => word.id !== action.payload);
       return {

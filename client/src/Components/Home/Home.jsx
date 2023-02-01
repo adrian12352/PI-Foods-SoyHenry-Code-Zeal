@@ -8,6 +8,7 @@ import Filters from "../Filters/Filters";
 import Paginated from "../Paginated/Paginated";
 import LoadingPage from "../LoadingPage/LoadingPage";
 import styles from "./Home.module.css";
+import Footer from "../Footer/Footer";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -70,6 +71,7 @@ export default function Home() {
               />
             </div>
           </div>
+          <Footer />
         </div>
       ) : (
         <LoadingPage />

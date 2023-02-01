@@ -1,6 +1,7 @@
-import React from "react";
-import { useDispatch } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
+  getDiets,
   getRecipe,
   filterRecipesByDiets,
   ordenByName,
@@ -44,6 +45,10 @@ export default function Filters() {
     const filterSalud = document.getElementById("salud");
     filterSalud.selectedIndex = 0;
   }
+  const diets = useSelector((state) => state.Diets);
+  useEffect(() => {
+    dispatch(getDiets());
+  }, [dispatch]);
 
   return (
     <div className={styles.mainDiv}>
@@ -56,14 +61,13 @@ export default function Filters() {
             defaultValue="default"
           >
             <option value="default">All Diets</option>
-            <option value="gluten free">Gluten free</option>
-            <option value="lacto ovo vegetarian">Lacto ovo vegetarian</option>
-            <option value="paleolithic">Paleolithic</option>
-            <option value="dairy free">Dairy free</option>
-            <option value="vegan">Vegan</option>
-            <option value="primal">Primal</option>
-            <option value="whole 30">Whole 30</option>
-            <option value="pescatarian">Pescatarian</option>
+            {diets.map((el, index) => {
+              return (
+                <option key={`Diet${index}`} value={el.name}>
+                  {el.name}
+                </option>
+              );
+            })}
           </select>
         </div>
         <div className={styles.filterContainer}>
@@ -76,8 +80,8 @@ export default function Filters() {
             <option value="default" disabled>
               Alphabetically
             </option>
-            <option value="asc">Ascendent</option>
-            <option values="desc">Descendent</option>
+            <option value="asc">Ascendent 🡹</option>
+            <option values="desc">Descendent 🡻</option>
           </select>
         </div>
         <div className={styles.filterContainer}>
@@ -90,8 +94,8 @@ export default function Filters() {
             <option value="default" disabled>
               Health Score
             </option>
-            <option value="asc">Ascendent</option>
-            <option value="desc">Descendent</option>
+            <option value="asc">Ascendent 🡹</option>
+            <option value="desc">Descendent 🡻</option>
           </select>
         </div>
       </div>

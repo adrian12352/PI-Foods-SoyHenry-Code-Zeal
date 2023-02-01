@@ -1,0 +1,45 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  height: auto;
+  padding: 10px;
+  gap: 10px;
+}
+.paginationHome {
+  display: inline-block;
+}
+.buttonBackHome {
+  background-color: #000;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Acme", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  height: 2.5rem;
+  padding: 0 1.2rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all 0.5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 20%;
+}
+.buttonBackHome:hover {
+  box-shadow: rgba(236, 236, 236, 0.5) 0 1px 30px;
+  transition-duration: 0.1s;
+}

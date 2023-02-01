@@ -1,5 +1,4 @@
-const { Recipe, Diet } = require("../db");
-const model = require("../allData/index.js");
+const { Diet } = require("../db");
 
 const getDiets = async (req, res) => {
   try {

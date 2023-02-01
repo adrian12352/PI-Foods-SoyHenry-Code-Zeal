@@ -2,14 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
 
-export default function Card({
-  img,
-  name,
-  diets,
-  id,
-  createdInDb,
-  healthScore,
-}) {
+export default function Card(props) {
+  const { img, name, diets, id, healthScore } = props;
   return (
     <div className={styles.mainDiv}>
       <Link className={styles.linkDetails} to={`/recipes/${id}`}>
